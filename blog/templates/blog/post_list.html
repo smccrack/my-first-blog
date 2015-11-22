@@ -3,6 +3,12 @@
 		<title>testing blog</title>
 	</head>
 	<body>
-		<a href='@'>lolol</a>
+		<p>
+		    {% for post in posts %}
+			<p> Published: {{post.published_date}} </p>
+			<h1><a href=""> {{ post.title }} </a></h1>
+			<p> {{ post.text|linebreaks }} </p>
+		    {% endfor %}
+		</p>
 	</body>
 </html>
